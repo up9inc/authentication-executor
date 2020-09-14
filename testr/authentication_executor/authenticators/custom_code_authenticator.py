@@ -1,8 +1,8 @@
 import base64
 
-from authentication_executor.authenticators.base_authenticator import AuthenticationResult, AuthenticationStatus, AuthSpecABC, \
+from testr.authentication_executor.authenticators.base_authenticator import AuthenticationResult, AuthenticationStatus, AuthSpecABC, \
     BaseAuthenticatorABC, AuthenticationPayload
-from authentication_executor.util.request_wrapper import RequestWrapper
+from testr.authentication_executor.util.request_wrapper import RequestWrapper
 
 # Prevents IDE from autoremoving the import, which is essential for the custom code itself
 _placeholder = AuthenticationPayload

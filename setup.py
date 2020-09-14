@@ -9,7 +9,7 @@ setuptools.setup(
     long_description="Authenticates according to a configuraion",
     long_description_content_type="text/markdown",
     url="https://github.com/up9inc/authentication-executor",
-    packages=['authentication_executor'],
+    packages=setuptools.find_namespace_packages(),
     install_requires=[
         'logger @ git+ssh://git@github.com/up9inc/testr-pycommon.git#subdirectory=logger'
     ],
