@@ -1,6 +1,6 @@
-from testr.authentication_executor.authenticators.base_authenticator import BaseAuthenticatorABC
-from testr.authentication_executor import CustomCodeAuthenticator
-from testr.authentication_executor import RequestAuthenticator
+from authentication_executor.authenticators.base_authenticator import BaseAuthenticatorABC
+from authentication_executor import CustomCodeAuthenticator
+from authentication_executor import RequestAuthenticator
 
 
 class InvalidAuthenticator(Exception):
