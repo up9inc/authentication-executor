@@ -1,6 +1,6 @@
 import unittest
 
-from authenticator import Authenticator, ApiClientABC, URLSignerABC
+from authentication_executor.authenticator import Authenticator, ApiClientABC, URLSignerABC
 from test.test_authentication import configs_1
 from general.bucket_uploader import BucketUploaderABC
 

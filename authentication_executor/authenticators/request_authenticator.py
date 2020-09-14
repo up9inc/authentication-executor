@@ -1,7 +1,7 @@
-from authenticators.base_authenticator import AuthenticationPayload, AuthenticationResult, \
+from authentication_executor.authenticators.base_authenticator import AuthenticationPayload, AuthenticationResult, \
     AuthenticationStatus, AuthSpecABC, \
     BaseAuthenticatorABC
-from util.request_wrapper import RequestWrapper
+from authentication_executor.util.request_wrapper import RequestWrapper
 
 
 # STUB - for testing only for now

@@ -1,6 +1,6 @@
-from authenticators.base_authenticator import BaseAuthenticatorABC
-from authenticators.custom_code_authenticator import CustomCodeAuthenticator
-from authenticators.request_authenticator import RequestAuthenticator
+from authentication_executor.authenticators.base_authenticator import BaseAuthenticatorABC
+from authentication_executor.authenticators.custom_code_authenticator import CustomCodeAuthenticator
+from authentication_executor.authenticators.request_authenticator import RequestAuthenticator
 
 
 class InvalidAuthenticator(Exception):

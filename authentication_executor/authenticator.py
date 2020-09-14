@@ -2,8 +2,8 @@ import json
 from abc import ABC, abstractmethod
 from uuid import uuid4
 
-from authenticators.authenticator_factory import AuthenticatorFactory
-from authenticators.base_authenticator import AuthenticationResult
+from authentication_executor.authenticators.authenticator_factory import AuthenticatorFactory
+from authentication_executor.authenticators.base_authenticator import AuthenticationResult
 from general.bucket_uploader import BucketUploaderABC
 
 

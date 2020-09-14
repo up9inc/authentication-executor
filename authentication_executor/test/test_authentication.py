@@ -2,9 +2,9 @@ import unittest
 
 import base64
 
-from authenticator import Authenticator
-from authenticators.authenticator_factory import InvalidAuthenticator
-from authenticators.custom_code_authenticator import CustomCodeRuntimeError, InvalidCodeError
+from authentication_executor.authenticator import Authenticator
+from authentication_executor.authenticators.authenticator_factory import InvalidAuthenticator
+from authentication_executor.authenticators.custom_code_authenticator import CustomCodeRuntimeError, InvalidCodeError
 
 valid_custom_code_1 = b"def custom_auth() -> AuthenticationPayload:\n" \
         b"\tprint('debugTest')\n" \
