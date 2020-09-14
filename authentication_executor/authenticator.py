@@ -4,7 +4,6 @@ from uuid import uuid4
 
 from authentication_executor.authenticators.authenticator_factory import AuthenticatorFactory
 from authentication_executor.authenticators.base_authenticator import AuthenticationResult
-from general.bucket_uploader import BucketUploaderABC
 
 
 class AuthExecutionResult:
@@ -16,6 +15,12 @@ class AuthExecutionResult:
 class SignedURLGeneratorABC(ABC):
     @abstractmethod
     def get_signed_url(self, *args, **kwargs):
+        pass
+
+
+class BucketUploaderABC(ABC):
+    @abstractmethod
+    def upload(self, data, content_type, signed_url) -> str:
         pass
 
 
@@ -36,7 +41,7 @@ class URLSignerABC(ABC):
 
 
 class Authenticator:
-    def __init__(self, bucket_uploader: BucketUploaderABC, url_signer: URLSignerABC, api_client:ApiClientABC):
+    def __init__(self, bucket_uploader: BucketUploaderABC, url_signer: URLSignerABC, api_client: ApiClientABC):
         # self.api = api
         self.api_client = api_client
         self.url_signer = url_signer
@@ -61,7 +66,8 @@ class Authenticator:
         # TODO this is quite similar to the result itself, can we merge somehow
         return {
             "harPath": har_path,
-            "payload": {"headers": result.payload.headers} if result.payload else None, # Currently supporting only headers
+            "payload": {"headers": result.payload.headers} if result.payload else None,
+            # Currently supporting only headers
             "debugData": result.debug_data,
             "config": config,  # TODO serialize
             "status": result.status.value,
@@ -94,8 +100,8 @@ class Authenticator:
         :return: Aggregated result for env var
         """
 
-        results = {k: self._process_config(k, v) for k, v in auth_configs.items()}  # list(map(self._process_config, auth_configs.items()))
-
+        results = {k: self._process_config(k, v) for k, v in
+                   auth_configs.items()}  # list(map(self._process_config, auth_configs.items()))
 
         did_any_fail = any(result["status"] != "SUCCESS" for result in results.values())
 
