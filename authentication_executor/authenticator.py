@@ -20,7 +20,7 @@ class SignedURLGeneratorABC(ABC):
 
 class BucketUploaderABC(ABC):
     @abstractmethod
-    def upload(self, data, content_type, signed_url) -> str:
+    def upload(self, data, content_type, signed_url):
         pass
 
 
@@ -60,12 +60,13 @@ class Authenticator:
     def _process_config(self, config_id, config):
         executor = AuthenticatorFactory.create(config)
         result = executor.execute()
-        signed_url = self.url_signer.get_signed_url(self.execution_id, f"{config_id}_{str(uuid4())}.har")
-        har_path = self.bucket_uploader.upload(json.dumps(result.har_data).encode('utf-8'), "text/plain", signed_url)
+        har_filename = f"{config_id}_{str(uuid4())}.har"
+        signed_url = self.url_signer.get_signed_url(self.execution_id, har_filename)
+        self.bucket_uploader.upload(json.dumps(result.har_data).encode('utf-8'), "text/plain", signed_url)
 
         # TODO this is quite similar to the result itself, can we merge somehow
         return {
-            "harPath": har_path,
+            "harFilename": har_filename,
             "payload": {"headers": result.payload.headers} if result.payload else None,
             # Currently supporting only headers
             "debugData": result.debug_data,
@@ -140,7 +141,7 @@ Some part needs to coordinate these and report
 2. Produce HAR from requests *
 3. Upload HARs *
 4. Persist auth result to TRCC *
-5. Persist test run with auth result to TRCC
+5. Persist test run with auth result to TRCC *
 ...
 
 * RCA -> display results + HAR in test run

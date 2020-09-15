@@ -1,6 +1,8 @@
 import datetime
 from urllib.parse import parse_qs, urlparse
+
 import requests
+
 
 # TODO transform cookies
 class RequestWrapper:
@@ -34,7 +36,8 @@ class RequestWrapper:
         request = resp.request
         query = urlparse(request.url).query
         self._entries.append({
-            "startedDateTime": (datetime.datetime.now() - resp.elapsed).astimezone().isoformat(),  # TODO datetime.datetime.now() - resp.elapsed,
+            "startedDateTime": (datetime.datetime.now() - resp.elapsed).astimezone().isoformat(),
+            # TODO datetime.datetime.now() - resp.elapsed,
             "time": 0,
             "request": {
                 "method": request.method,
@@ -51,7 +54,7 @@ class RequestWrapper:
                 "status": resp.status_code,
                 "statusText": "?",  # TODO
                 "httpVersion": '',
-                "cookies": [], # TODO list(resp.cookies),
+                "cookies": [],  # TODO list(resp.cookies),
                 "headers": RequestWrapper._dict_to_array(resp.headers),
                 "content": {
                     "size": resp.headers.get('content-length') or len(resp.text),

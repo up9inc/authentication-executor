@@ -1,11 +1,12 @@
 import base64
 
-from authentication_executor.authenticators.base_authenticator import AuthenticationResult, AuthenticationStatus, AuthSpecABC, \
-    BaseAuthenticatorABC, AuthenticationPayload
+from authentication_executor.authenticators.base_authenticator import AuthenticationPayload, AuthenticationResult, \
+    AuthenticationStatus, AuthSpecABC, BaseAuthenticatorABC
 from authentication_executor.util.request_wrapper import RequestWrapper
 
 # Prevents IDE from autoremoving the import, which is essential for the custom code itself
 _placeholder = AuthenticationPayload
+
 
 def decode_base64_code(base64_code, indent_space_amount):
     decoded = base64.b64decode(base64_code).decode("utf-8")
