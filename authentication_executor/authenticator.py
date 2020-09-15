@@ -71,7 +71,7 @@ class Authenticator:
             **extra,
             "status": result.status.value
         })
-        har_filename = f"{config_id}_{str(uuid4()[:6])}.har"
+        har_filename = f"{config_id}_{str(uuid4())[:6]}.har"
         signed_url = self.url_signer.get_signed_url(self.execution_id, har_filename)
         logger.info("Uploading HAR")
         self.bucket_uploader.upload(json.dumps(result.har_data).encode('utf-8'), "text/plain", signed_url)
