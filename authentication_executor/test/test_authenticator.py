@@ -1,8 +1,8 @@
 import unittest
 
 from authentication_executor.authenticator import Authenticator, ApiClientABC, URLSignerABC
-from test.test_authentication import configs_1
-from general.bucket_uploader import BucketUploaderABC
+from authentication_executor.test.test_authentication import configs_1
+from authentication_executor import BucketUploaderABC
 
 
 class BucketUploaderMock(BucketUploaderABC):

@@ -1,9 +1,20 @@
 import json
 from abc import ABC, abstractmethod
+from enum import Enum
 from uuid import uuid4
 
+from testr.logger.logging_util import LoggerFactory
+
+from authentication_executor.authenticators.base_authenticator import AuthenticationStatus
+
+logger = LoggerFactory.get_logger(__name__)
+
 from authentication_executor.authenticators.authenticator_factory import AuthenticatorFactory
-from authentication_executor.authenticators.base_authenticator import AuthenticationResult
+
+
+class AuthExecutionStatus(Enum):
+    FAIL = "FAIL"
+    SUCCESS = "SUCCESS"
 
 
 class AuthExecutionResult:
@@ -42,27 +53,29 @@ class URLSignerABC(ABC):
 
 class Authenticator:
     def __init__(self, bucket_uploader: BucketUploaderABC, url_signer: URLSignerABC, api_client: ApiClientABC):
-        # self.api = api
         self.api_client = api_client
         self.url_signer = url_signer
         self.bucket_uploader = bucket_uploader
         self.execution_id = self.api_client.create_execution_id()
-        # def get_signed_url(filename):
-        #     return api.get_signed_url(self.execution_id, filename)
-
-    # TODO merge with execute()
-    @staticmethod
-    def verify_config(config) -> AuthenticationResult:
-        executor = AuthenticatorFactory.create(config)
-        return executor.execute()
 
     # TODO perhaps this should return a class with JSON serialization
     def _process_config(self, config_id, config):
+        extra = {
+            "configId": config_id
+        }
+
         executor = AuthenticatorFactory.create(config)
+        logger.info("Executing authentication config", extra=extra)
         result = executor.execute()
-        har_filename = f"{config_id}_{str(uuid4())}.har"
+        logger.info("Done executing", extra={
+            **extra,
+            "status": result.status.value
+        })
+        har_filename = f"{config_id}_{str(uuid4()[:6])}.har"
         signed_url = self.url_signer.get_signed_url(self.execution_id, har_filename)
+        logger.info("Uploading HAR")
         self.bucket_uploader.upload(json.dumps(result.har_data).encode('utf-8'), "text/plain", signed_url)
+        logger.info("Done uploading HAR")
 
         # TODO this is quite similar to the result itself, can we merge somehow
         return {
@@ -100,19 +113,27 @@ class Authenticator:
         }
         :return: Aggregated result for env var
         """
+        LoggerFactory.set_extra_global_context({
+            "executionId": self.execution_id
+        })
 
-        results = {k: self._process_config(k, v) for k, v in
-                   auth_configs.items()}  # list(map(self._process_config, auth_configs.items()))
+        logger.info("Starting authentication execution")
 
-        did_any_fail = any(result["status"] != "SUCCESS" for result in results.values())
+        results = {k: self._process_config(k, v) for k, v in auth_configs.items()}
+
+        did_any_fail = any(result["status"] != AuthenticationStatus.SUCCESS.value for result in results.values())
 
         self.api_client.persist_results(self.execution_id, {
             "executions": results,
-            "status": "FAILED" if did_any_fail else "SUCCESS"  # TODO enum and improve
+            "status": AuthExecutionStatus.FAIL.value if did_any_fail else AuthExecutionStatus.SUCCESS.value
         })
 
         if did_any_fail:
             raise Exception("Authentication Execution Failed!")
+
+        LoggerFactory.set_extra_global_context({
+            "executionId": None
+        })
 
         return AuthExecutionResult(
             self.execution_id,
@@ -125,38 +146,3 @@ class Authenticator:
             'entityPayloads': {config_id: config['payload'] for config_id, config in results.items()},
             **assignments
         }
-
-
-"""
-
-A test run runs multiple payloads:
-    id1: customCode1
-    id2: customCode2
-
-Some part needs to coordinate these and report
-
-
-
-1. Persist config/assignment object differently from FE->TRCC *
-2. Produce HAR from requests *
-3. Upload HARs *
-4. Persist auth result to TRCC *
-5. Persist test run with auth result to TRCC *
-...
-
-* RCA -> display results + HAR in test run
-* Support verify flow in test run
-* FE -> add verify button + read results
-* Test auth helper still works
-* Custom code migration script
-* Thread for uploading HARs
-* Consider separating the authenticator service / job
-* Release new test runner etc
-* Handle test runner duplication thing for ECS
-* Improve HAR conversion
-* tests for HAR conversion/extract to joint library?
-* Logging
-* Handle lingering status
-* Test impersonation in test run + verify
-
-"""
