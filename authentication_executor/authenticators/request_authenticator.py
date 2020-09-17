@@ -25,7 +25,7 @@ class RequestAuthenticator(BaseAuthenticatorABC):
             AuthenticationStatus.SUCCESS,
             AuthenticationPayload(
                 headers={
-                    "XX": "1"
+                    "STUB": "1"
                 }
             ),
             None,

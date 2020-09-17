@@ -64,6 +64,8 @@ class CustomCodeAuthenticator(BaseAuthenticatorABC):
                 raise InvalidCodeEncodingError(e)
 
             try:
+                # Ensure user function receives both global and local scope.
+                # This will cause the function to not actually be defined in this local scope but on the dict instead
                 combined_scope_dict = {**globals(), **locals()}
                 exec(code, combined_scope_dict)
                 compiled_func = combined_scope_dict['custom_auth']
@@ -91,21 +93,9 @@ class CustomCodeAuthenticator(BaseAuthenticatorABC):
             print = _print
             requests.close()
 
-        # try:
-
-        # Ensure user function receives both global and local scope.
-        # This will cause the function to not actually be defined in this local scope but on the dict instead
-        # except Exception as e:
-        #     debug_data.append(str(e))
-        #     debug_data.append("Custom code runtime error")
-        #     status = AuthenticationStatus.FAIL
-
         return AuthenticationResult(
             status,
             authentication,
             request_wrapper.to_har(),
             debug_data
         )
-
-# executor = CustomCodeExecutor(CustomCodeAuthSpec(my_cust_code))
-# executor.execute()
