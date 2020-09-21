@@ -1,0 +1,2 @@
+requests==2.24.0
+git+ssh://git@github.com/up9inc/testr-pycommon.git#subdirectory=logger&egg=logger

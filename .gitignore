@@ -1,0 +1,9 @@
+.idea
+venv
+__pycache__
+.pytest_cache
+secrets
+.DS_Store
+*.log
+.vscode
+*.iml
