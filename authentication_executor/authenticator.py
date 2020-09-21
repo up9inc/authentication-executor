@@ -18,15 +18,9 @@ class AuthExecutionStatus(Enum):
 
 
 class AuthExecutionResult:
-    def __init__(self, _id, json):
+    def __init__(self, _id, result_json):
         self.id = _id
-        self.json = json
-
-
-class SignedURLGeneratorABC(ABC):
-    @abstractmethod
-    def get_signed_url(self, *args, **kwargs):
-        pass
+        self.json = result_json
 
 
 class BucketUploaderABC(ABC):
@@ -79,7 +73,7 @@ class Authenticator:
             # Currently supporting only headers
             "debugData": result.debug_data,
             "config": config,  # TODO serialize
-            "status": result.status.value,
+            "status": result.status.value
         }
 
         if result.har_data:
