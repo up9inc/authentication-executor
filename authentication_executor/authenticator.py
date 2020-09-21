@@ -67,25 +67,30 @@ class Authenticator:
         executor = AuthenticatorFactory.create(config)
         logger.info("Executing authentication config", extra=extra)
         result = executor.execute()
+
         logger.info("Done executing", extra={
             **extra,
             "status": result.status.value
         })
-        har_filename = f"{config_id}_{str(uuid4())[:6]}.har"
-        signed_url = self.url_signer.get_signed_url(self.execution_id, har_filename)
-        logger.info("Uploading HAR")
-        self.bucket_uploader.upload(json.dumps(result.har_data).encode('utf-8'), "text/plain", signed_url)
-        logger.info("Done uploading HAR")
 
         # TODO this is quite similar to the result itself, can we merge somehow
-        return {
-            "harFilename": har_filename,
+        result_json = {
             "payload": {"headers": result.payload.headers} if result.payload else None,
             # Currently supporting only headers
             "debugData": result.debug_data,
             "config": config,  # TODO serialize
             "status": result.status.value,
         }
+
+        if result.har_data:
+            har_filename = f"{config_id}_{str(uuid4())[:6]}.har"
+            signed_url = self.url_signer.get_signed_url(self.execution_id, har_filename)
+            logger.info("Uploading HAR")
+            self.bucket_uploader.upload(json.dumps(result.har_data).encode('utf-8'), "text/plain", signed_url)
+            logger.info("Done uploading HAR")
+            result_json["harFilename"] = har_filename
+
+        return result_json
 
     def execute(self, auth_configs, assignments) -> AuthExecutionResult:
         """

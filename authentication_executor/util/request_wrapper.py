@@ -12,6 +12,9 @@ class RequestWrapper:
         self.session.hooks['response'] = [self._produce_entry]
 
     def to_har(self):
+        if len(self._entries) == 0:
+            return None
+
         return {
             "log": {
                 "version": "1.2",
