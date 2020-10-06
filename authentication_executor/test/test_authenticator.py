@@ -1,3 +1,4 @@
+import logging
 import unittest
 
 from authentication_executor.authenticator import Authenticator, ApiClientABC, URLSignerABC
@@ -26,7 +27,8 @@ class URLSignerMock(URLSignerABC):
 authenticator = Authenticator(
     BucketUploaderMock(),
     URLSignerMock(),
-    ApiClientMock()
+    ApiClientMock(),
+    logging.getLogger("AuthExecutor")
 )
 
 

@@ -11,7 +11,6 @@ setuptools.setup(
     url="https://github.com/up9inc/authentication-executor",
     packages=setuptools.find_namespace_packages(),
     install_requires=[
-        'logger @ git+ssh://git@github.com/up9inc/testr-pycommon.git#subdirectory=logger',
         'requests'
     ],
     classifiers=[
