@@ -3,13 +3,8 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from uuid import uuid4
 
-from testr.logger.logging_util import LoggerFactory
-
-from authentication_executor.authenticators.base_authenticator import AuthenticationStatus
-
-logger = LoggerFactory.get_logger(__name__)
-
 from authentication_executor.authenticators.authenticator_factory import AuthenticatorFactory
+from authentication_executor.authenticators.base_authenticator import AuthenticationStatus
 
 
 class AuthExecutionStatus(Enum):
@@ -46,11 +41,12 @@ class URLSignerABC(ABC):
 
 
 class Authenticator:
-    def __init__(self, bucket_uploader: BucketUploaderABC, url_signer: URLSignerABC, api_client: ApiClientABC):
+    def __init__(self, bucket_uploader: BucketUploaderABC, url_signer: URLSignerABC, api_client: ApiClientABC, logger):
         self.api_client = api_client
         self.url_signer = url_signer
         self.bucket_uploader = bucket_uploader
         self.execution_id = self.api_client.create_execution_id()
+        self.logger = logger
 
     # TODO perhaps this should return a class with JSON serialization
     def _process_config(self, config_id, config):
@@ -59,10 +55,10 @@ class Authenticator:
         }
 
         executor = AuthenticatorFactory.create(config)
-        logger.info("Executing authentication config", extra=extra)
+        self.logger.info("Executing authentication config", extra=extra)
         result = executor.execute()
 
-        logger.info("Done executing", extra={
+        self.logger.info("Done executing", extra={
             **extra,
             "status": result.status.value
         })
@@ -79,9 +75,9 @@ class Authenticator:
         if result.har_data:
             har_filename = f"{config_id}_{str(uuid4())[:6]}.har"
             signed_url = self.url_signer.get_signed_url(self.execution_id, har_filename)
-            logger.info("Uploading HAR")
+            self.logger.info("Uploading HAR")
             self.bucket_uploader.upload(json.dumps(result.har_data).encode('utf-8'), "text/plain", signed_url)
-            logger.info("Done uploading HAR")
+            self.logger.info("Done uploading HAR")
             result_json["harFilename"] = har_filename
 
         return result_json
@@ -112,11 +108,9 @@ class Authenticator:
         }
         :return: Aggregated result for env var
         """
-        LoggerFactory.set_extra_global_context({
+        self.logger.info("Starting authentication execution", extra={
             "executionId": self.execution_id
         })
-
-        logger.info("Starting authentication execution")
 
         results = {k: self._process_config(k, v) for k, v in auth_configs.items()}
 
@@ -129,10 +123,6 @@ class Authenticator:
 
         if did_any_fail:
             raise Exception("Authentication Execution Failed!")
-
-        LoggerFactory.set_extra_global_context({
-            "executionId": None
-        })
 
         return AuthExecutionResult(
             self.execution_id,
