@@ -1,6 +1,7 @@
 import logging
 import os
 import unittest
+import json
 
 from authentication_executor.authenticator import Authenticator, ApiClientABC, URLSignerABC
 from authentication_executor.test.data import configs_1, configs
@@ -16,7 +17,8 @@ class ApiClientMock(ApiClientABC):
     def create_execution_id(self):
         return 'exeuctionId1'
 
-    def persist_results(self, json, execution_id):
+    def persist_results(self, execution_id, _json):
+        json.dumps(_json)
         return ''
 
 

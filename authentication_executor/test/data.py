@@ -18,7 +18,7 @@ configs_1 = {
     "XXX_ZZZ": {
         "type": "customCode",
         "spec": {
-            "customCode": base64.b64encode(valid_custom_code_1)
+            "customCode": base64.b64encode(valid_custom_code_1).decode()
         }
     }
 }
@@ -28,7 +28,7 @@ configs = {
         # valid_custom_code_spec_1,
             "type": "customCode",
             "spec": {
-                "customCode": base64.b64encode(code2)
+                "customCode": base64.b64encode(code2).decode()
             }
     },
     "REQUEST": {

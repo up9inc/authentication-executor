@@ -38,7 +38,7 @@ class AuthenticationResultPostProcess:
 
     def to_dict(self):
         result_dict = {
-            "payload": self.result.payload,
+            "payload": self.result.payload.to_dict(),
             # Currently supporting only headers
             "debugData": self.result.debug_data,
             "config": self.config,  # TODO serialize
