@@ -16,9 +16,12 @@ class AuthenticationPayload:
         self.legacy_json = legacy_json
 
     def to_dict(self):
-        return {
-            "headers": self.headers
-        }
+        if self.legacy_json:
+            return self.legacy_json
+        else:
+            return {
+                "headers": self.headers
+            }
 
 
 class AuthenticationResult:
