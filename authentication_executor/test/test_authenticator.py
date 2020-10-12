@@ -1,8 +1,9 @@
 import logging
+import os
 import unittest
 
 from authentication_executor.authenticator import Authenticator, ApiClientABC, URLSignerABC
-from authentication_executor.test.test_authentication import configs_1
+from authentication_executor.test.data import configs_1, configs
 from authentication_executor import BucketUploaderABC
 
 
@@ -34,8 +35,10 @@ authenticator = Authenticator(
 
 class AuthenticatorTests(unittest.TestCase):
     def test_aggregate_results(self):
-        execute = authenticator.execute(configs_1, {"payloadId": "XXX_ZZZ"})
-        self.assertEqual(execute.json['entityPayloads']['XXX_ZZZ']['headers']['Auth'], '1')
+        os.environ['AUTH_HELPER_SERVER'] = "localhost:3001"
+        configs.pop('AUTH_HELPER')
+        execute = authenticator.execute(configs, {"payloadId": "XXX_ZZZ"})
+        self.assertEqual(execute.json['entityPayloads']['XXX_ZZZ']['headers']['Auth'], '2')
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 from authentication_executor.authenticators.base_authenticator import BaseAuthenticatorABC
+from .auth_helper_authenticator import AuthHelperAuthenticator
 from .custom_code_authenticator import CustomCodeAuthenticator
 from .request_authenticator import RequestAuthenticator
 
@@ -16,6 +17,8 @@ class AuthenticatorFactory:
             return CustomCodeAuthenticator(spec)
         elif authenticator_type == 'request':
             return RequestAuthenticator(spec)
+        elif authenticator_type == 'authHelper':
+            return AuthHelperAuthenticator(spec)
         else:
             raise InvalidAuthenticator()
 
