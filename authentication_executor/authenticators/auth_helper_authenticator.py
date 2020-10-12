@@ -33,8 +33,8 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
 
         try:
             resp = requests_session.post(f'http://{auth_helper_server}:3000', json=self.execution_spec.spec)
-            resp.raise_for_status()
             auth_helper_response = resp.json()
+            resp.raise_for_status()
         except BaseException as e:
             status = AuthenticationStatus.FAIL
         finally:
