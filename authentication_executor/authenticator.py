@@ -108,7 +108,7 @@ class Authenticator:
             "executionId": self.execution_id
         })
 
-        results = {k: self._process_config(k, v) for k, v in auth_configs.items()}
+        results = {config_id: self._process_config(config_id, config) for config_id, config in auth_configs.items() if self._should_execute(config_id, assignments)}
 
         did_any_fail = any(post_process_result.result.status != AuthenticationStatus.SUCCESS for post_process_result in results.values())
 
@@ -136,3 +136,16 @@ class Authenticator:
             'entityPayloads': {config_id: post_process_result.result.payload.to_dict() for config_id, post_process_result in results.items()},
             **assignments
         }
+
+    def _should_execute(self, config_id, assignments):
+        if assignments.get('payloadId') == config_id:
+            return True
+
+        for svc_target_name, svc_config in assignments.get('services', {}).items():
+            if svc_config.get('payloadId') == config_id:
+                return True
+            for ep_config in svc_config.get('endpoints', []):
+                if ep_config['payloadId'] == config_id:
+                    return True
+
+        return False

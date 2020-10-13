@@ -1,0 +1,351 @@
+{
+  "cookies": [
+    {
+      "domain": "auth.shahar-dev.dev.testr.io",
+      "expires": -1,
+      "httpOnly": true,
+      "name": "AUTH_SESSION_ID",
+      "path": "/auth/realms/testr/",
+      "priority": "Medium",
+      "secure": false,
+      "session": true,
+      "size": 62,
+      "value": "8d51d0f8-a5f1-4646-8470-9bf9c1c24328.keycloak-0"
+    },
+    {
+      "domain": "auth.shahar-dev.dev.testr.io",
+      "expires": 1633970250.205287,
+      "httpOnly": false,
+      "name": "KEYCLOAK_SESSION",
+      "path": "/auth/realms/testr/",
+      "priority": "Medium",
+      "sameSite": "None",
+      "secure": true,
+      "session": false,
+      "size": 95,
+      "value": "testr/d588ee91-95bc-4ecf-ad09-9f669c73731c/8d51d0f8-a5f1-4646-8470-9bf9c1c24328"
+    },
+    {
+      "domain": "auth.shahar-dev.dev.testr.io",
+      "expires": 1633970250.205312,
+      "httpOnly": false,
+      "name": "KEYCLOAK_SESSION_LEGACY",
+      "path": "/auth/realms/testr/",
+      "priority": "Medium",
+      "secure": false,
+      "session": false,
+      "size": 102,
+      "value": "testr/d588ee91-95bc-4ecf-ad09-9f669c73731c/8d51d0f8-a5f1-4646-8470-9bf9c1c24328"
+    },
+    {
+      "domain": "auth.shahar-dev.dev.testr.io",
+      "expires": 1634056650.205335,
+      "httpOnly": true,
+      "name": "KEYCLOAK_REMEMBER_ME",
+      "path": "/auth/realms/testr/",
+      "priority": "Medium",
+      "secure": false,
+      "session": false,
+      "size": 42,
+      "value": "username:user1@up9.com"
+    },
+    {
+      "domain": "auth.shahar-dev.dev.testr.io",
+      "expires": 1633970250.205196,
+      "httpOnly": true,
+      "name": "KEYCLOAK_IDENTITY",
+      "path": "/auth/realms/testr/",
+      "priority": "Medium",
+      "sameSite": "None",
+      "secure": true,
+      "session": false,
+      "size": 600,
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkNWY1YmVkNC1mZWQ4LTQ1YTQtYjcwZS1hMjA0Mzc3NWQ0MTUifQ.eyJleHAiOjE2MzM5NzAyNTAsImlhdCI6MTYwMjUyMDY1MCwianRpIjoiYzg4OTNkOGMtMTVmYS00NmE0LWIzZGItZGMyODE1NmQyYmZlIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNoYWhhci1kZXYuZGV2LnRlc3RyLmlvL2F1dGgvcmVhbG1zL3Rlc3RyIiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiU2VyaWFsaXplZC1JRCIsInNlc3Npb25fc3RhdGUiOiI4ZDUxZDBmOC1hNWYxLTQ2NDYtODQ3MC05YmY5YzFjMjQzMjgiLCJzdGF0ZV9jaGVja2VyIjoiM2hIT0RIdEU0UXV0cjJJWlhzbjRBc0xXSFRJbF9nbXR2cG9xUmJPdjNnYyJ9.BasbTULje2Tr7Unm2q1r2v1Gq8TDLGTF6KSk76CHCKQ"
+    },
+    {
+      "domain": "auth.shahar-dev.dev.testr.io",
+      "expires": 1633970250.205255,
+      "httpOnly": true,
+      "name": "KEYCLOAK_IDENTITY_LEGACY",
+      "path": "/auth/realms/testr/",
+      "priority": "Medium",
+      "secure": false,
+      "session": false,
+      "size": 607,
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkNWY1YmVkNC1mZWQ4LTQ1YTQtYjcwZS1hMjA0Mzc3NWQ0MTUifQ.eyJleHAiOjE2MzM5NzAyNTAsImlhdCI6MTYwMjUyMDY1MCwianRpIjoiYzg4OTNkOGMtMTVmYS00NmE0LWIzZGItZGMyODE1NmQyYmZlIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNoYWhhci1kZXYuZGV2LnRlc3RyLmlvL2F1dGgvcmVhbG1zL3Rlc3RyIiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiU2VyaWFsaXplZC1JRCIsInNlc3Npb25fc3RhdGUiOiI4ZDUxZDBmOC1hNWYxLTQ2NDYtODQ3MC05YmY5YzFjMjQzMjgiLCJzdGF0ZV9jaGVja2VyIjoiM2hIT0RIdEU0UXV0cjJJWlhzbjRBc0xXSFRJbF9nbXR2cG9xUmJPdjNnYyJ9.BasbTULje2Tr7Unm2q1r2v1Gq8TDLGTF6KSk76CHCKQ"
+    },
+    {
+      "domain": "auth.shahar-dev.dev.testr.io",
+      "expires": -1,
+      "httpOnly": false,
+      "name": "inviteToken",
+      "path": "/",
+      "priority": "Medium",
+      "secure": false,
+      "session": true,
+      "size": 11,
+      "value": ""
+    },
+    {
+      "domain": ".testr.io",
+      "expires": 1625850638,
+      "httpOnly": false,
+      "name": "intercom-id-gcndx9tp",
+      "path": "/",
+      "priority": "Medium",
+      "sameSite": "Lax",
+      "secure": false,
+      "session": false,
+      "size": 56,
+      "value": "07cf17a3-50e2-4b2a-9938-0b41fbdceaa0"
+    },
+    {
+      "domain": ".testr.io",
+      "expires": 1665592651,
+      "httpOnly": false,
+      "name": "_ga",
+      "path": "/",
+      "priority": "Medium",
+      "secure": false,
+      "session": false,
+      "size": 30,
+      "value": "GA1.2.1252792060.1602520652"
+    },
+    {
+      "domain": ".testr.io",
+      "expires": 1602607051,
+      "httpOnly": false,
+      "name": "_gid",
+      "path": "/",
+      "priority": "Medium",
+      "secure": false,
+      "session": false,
+      "size": 29,
+      "value": "GA1.2.56974345.1602520652"
+    },
+    {
+      "domain": ".testr.io",
+      "expires": 1602520711,
+      "httpOnly": false,
+      "name": "_gat",
+      "path": "/",
+      "priority": "Medium",
+      "secure": false,
+      "session": false,
+      "size": 5,
+      "value": "1"
+    },
+    {
+      "domain": ".testr.io",
+      "expires": 1636598252,
+      "httpOnly": false,
+      "name": "_hp2_id.43379107",
+      "path": "/",
+      "priority": "Medium",
+      "sameSite": "Lax",
+      "secure": false,
+      "session": false,
+      "size": 276,
+      "value": "%7B%22userId%22%3A%225380888113026095%22%2C%22pageviewId%22%3A%226375685944661799%22%2C%22sessionId%22%3A%226797557973918751%22%2C%22identity%22%3A%22user1%40up9.com%22%2C%22trackerVersion%22%3A%224.0%22%2C%22identityField%22%3Anull%2C%22isIdentified%22%3A1%7D"
+    },
+    {
+      "domain": "shahar-dev.dev.testr.io",
+      "expires": 1602520952.806423,
+      "httpOnly": true,
+      "name": "session",
+      "path": "/",
+      "priority": "Medium",
+      "secure": false,
+      "session": false,
+      "size": 126,
+      "value": "eyJfcGVybWFuZW50Ijp0cnVlLCJvcmciOiJzb21lT3JnSWQxMjMiLCJ1c2VyIjoidXNlcjFAdXA5LmNvbSJ9.X4SGTA.DRmgilDPh5oZhy6cpiBi4_LGW5o"
+    },
+    {
+      "domain": ".testr.io",
+      "expires": 1602522453,
+      "httpOnly": false,
+      "name": "_hp2_ses_props.43379107",
+      "path": "/",
+      "priority": "Medium",
+      "sameSite": "Lax",
+      "secure": false,
+      "session": false,
+      "size": 427,
+      "value": "%7B%22r%22%3A%22https%3A%2F%2Fauth.shahar-dev.dev.testr.io%2Fauth%2Frealms%2Ftestr%2Fprotocol%2Fopenid-connect%2Fauth%3Fresponse_type%3Dcode%26client_id%3Dreact-client%26redirect_uri%3Dhttps%253A%252F%252Fshahar-dev.dev.testr.io%252Foauth_cb%26state%3DPOUYMO6ydMGdPC0X9HLpoZRX3jFyBR%22%2C%22ts%22%3A1602520652605%2C%22d%22%3A%22shahar-dev.dev.testr.io%22%2C%22h%22%3A%22%2FsomeOrgId123%2Fworkspaces%22%7D"
+    },
+    {
+      "domain": ".testr.io",
+      "expires": 1603125454,
+      "httpOnly": false,
+      "name": "intercom-session-gcndx9tp",
+      "path": "/",
+      "priority": "Medium",
+      "sameSite": "Lax",
+      "secure": false,
+      "session": false,
+      "size": 187,
+      "value": "L1d0b0hXQXZEUWhDTTVncHpMNjR6SlByRldsdDY3aUFybzdhVDdmWnFhbGRBajFLZyt3MnRkTndWREFadytQRy0tYlMvQ1hTNE1pcTNmZ0tFRzdlRkdPZz09--c6fe7daa39c422ea997cdbfb9ce72c000cbf1792"
+    }
+  ],
+  "endpoints": [
+    {
+      "headers": {},
+      "method": "get",
+      "path": "/",
+      "target": "TARGET_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {},
+      "method": "get",
+      "path": "/auth/realms/testr/protocol/openid-connect/login-status-iframe.html",
+      "target": "TARGET_AUTH_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {},
+      "method": "get",
+      "path": "/silent-check-sso.html",
+      "target": "TARGET_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {},
+      "method": "post",
+      "path": "/auth/realms/testr/protocol/openid-connect/token",
+      "target": "TARGET_AUTH_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {},
+      "method": "get",
+      "path": "/app/profile",
+      "target": "TARGET_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/auth/realms/testr/invite-link/getInviteLink",
+      "target": "TARGET_AUTH_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "post",
+      "path": "/admin/apiKey",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/status",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/lastResults/{name}",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/suites/",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/lastResults/{name}/swagger",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/lastResults/{name}/dataDependency",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/lastResults/{name}/dataDependency/span",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/agents/",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/suites/{name}",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/suites/{name}/targets",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/suites/{name}/runs",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/suites/{name}/agents/{agentId}/profiles",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer zeyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "get",
+      "path": "/models/{modelId}/suites/{name}/tests",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    },
+    {
+      "headers": {
+        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxVHJzSm9QWFJLM2Z2c2VXZDRwbm9XN2h4ZHRMeExOclhubzdIY3FRVm13In0.eyJleHAiOjE2MDI4NjYyNTAsImlhdCI6MTYwMjUyMDY1MCwiYXV0aF90aW1lIjoxNjAyNTIwNjQxLCJqdGkiOiJlMGE5NzE3My1mZTRkLTQ0MWUtYTJjYi03ODdlNWQ3MDcxZjYiLCJpc3MiOiJodHRwczovL2F1dGguc2hhaGFyLWRldi5kZXYudGVzdHIuaW8vYXV0aC9yZWFsbXMvdGVzdHIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZDU4OGVlOTEtOTViYy00ZWNmLWFkMDktOWY2NjljNzM3MzFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicmVhY3QtY2xpZW50Iiwibm9uY2UiOiJhMTIyYTQ3ZS1kMzk0LTRjMjktODY3MS1jMGQ4OGRjZWJmZGMiLCJzZXNzaW9uX3N0YXRlIjoiOGQ1MWQwZjgtYTVmMS00NjQ2LTg0NzAtOWJmOWMxYzI0MzI4IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJjaHJvbWUtZXh0ZW5zaW9uOi8vbmFkZ2VsamVtbWJna2xkaGNwYWZqbXBtYXBpcGdsY20iLCJodHRwczovL3NoYWhhci1kZXYuZGV2LnRlc3RyLmlvIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImltcGVyc29uYXRlR3JvdXAiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJncm91cF9tZW1iZXJzaGlwIjpbInNvbWVPcmdJZDEyMyJdLCJmZWF0dXJlcyI6eyJiYXRjaElnbm9yZUVuZHBvaW50cyI6dHJ1ZX0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMUB1cDkuY29tIiwiZ2l2ZW5fbmFtZSI6InVzZXIxIiwiZmFtaWx5X25hbWUiOiJ1c2VyMSIsImdyb3VwX3N1YmRvbWFpbiI6InNvbWVPcmdJZDEyMyIsImVtYWlsIjoidXNlcjFAdXA5LmNvbSJ9.A94H49bQnIo-I6huR-3xu99_sSL2_68pV90I1Wp5kpswgffN57GPAleoG2WMqUqYnHxEGTsQJcrxXJfy6q29B7kkMNzzQ1E8K0RPjQ-QoUlzkgpZLFBmiA5bhSbgHQF7LGMsQO2XqeRzvLEWl7Z0htUI6c99FMS82JHDs-ILnB5w0vpbOhG8Gkub1O-UCiNyeu4BywilMFAX11t5q0zv3bx5IhOCYklNpMLwYeHijLGrGYOhznnL500o33RIzoRFzyq-vHdyswHm5teQ3vO3w7EjA4h9dgVQBhfcnDXkInpSDaO760whk8KVfmoIAXV1B4LWO5npEaMrDPJx-1uDtg"
+      },
+      "method": "post",
+      "path": "/models/{modelId}/suites/{name}",
+      "target": "TARGET_TRCC_SHAHAR_DEV_DEV_TESTR_IO"
+    }
+  ],
+  "headers": {}
+}

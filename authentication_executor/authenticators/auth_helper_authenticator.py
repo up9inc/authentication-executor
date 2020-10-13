@@ -43,11 +43,7 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
         if auth_helper_response:
             debug_data = auth_helper_response["debugData"]
             debug_data.append(json.dumps(auth_helper_response["resultInfo"], indent=3))
-            legacy_json = {
-                "headers": auth_helper_response["headers"],
-                "cookies": auth_helper_response["cookies"],
-                "endpoints": auth_helper_response["endpoints"],
-            }
+            legacy_json = AuthHelperAuthenticator._convert_to_executor_format(auth_helper_response)
 
         return AuthenticationResult(
             status,
@@ -55,3 +51,43 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
             wrapper.to_har(),
             debug_data
         )
+
+    @staticmethod
+    def _convert_to_executor_format(auth_helper_dict):
+        eps = auth_helper_dict["endpoints"]
+
+        payloads = {
+            "generated_payload_global": {
+                "headers": auth_helper_dict["headers"]
+            }
+        }
+
+        assignments = {
+            "payloadId": "generated_payload_global"
+        }
+
+        for ep in eps:
+            if ep["headers"] and len(ep["headers"]) > 0:
+                payload_id = False
+                for existing_payload_id, payload_val in payloads.items():
+                    if payload_val["headers"] == ep["headers"]:
+                        payload_id = existing_payload_id
+                        break
+
+                if not payload_id:
+                    payload_id = f"generated_payload_{len(payloads)}"
+                    payloads[payload_id] = {
+                        "headers": ep["headers"]
+                    }
+
+                assignments.setdefault("services", {}).setdefault(ep["target"], {"endpoints": []})["endpoints"].append({
+                    "method": ep["method"],
+                    "path": ep["path"],
+                    "payloadId": payload_id
+                })
+
+        return {
+            "assignments": assignments,
+            "entityPayloads": payloads,
+            "cookies": auth_helper_dict["cookies"]
+        }

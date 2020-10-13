@@ -25,7 +25,7 @@ class AuthenticationPayload:
 
 
 class AuthenticationResult:
-    def __init__(self, status: AuthenticationStatus, payload: AuthenticationPayload, har_data: dict,
+    def __init__(self, status: AuthenticationStatus, payload: AuthenticationPayload, har_data: Optional[dict],
                  debug_data: List[str]):
         self.status = status
         self.payload = payload
