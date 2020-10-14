@@ -53,7 +53,7 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
         )
 
     @staticmethod
-    def _convert_to_executor_format(auth_helper_dict):
+    def convert_to_executor_format(auth_helper_dict):
         eps = auth_helper_dict["endpoints"]
 
         payloads = {
