@@ -87,7 +87,7 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
                 })
 
         return {
-            "assignments": assignments,
+            **assignments,
             "entityPayloads": payloads,
             "cookies": auth_helper_dict["cookies"]
         }
