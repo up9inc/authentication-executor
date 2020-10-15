@@ -43,7 +43,7 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
         if auth_helper_response:
             debug_data = auth_helper_response["debugData"]
             debug_data.append(json.dumps(auth_helper_response["resultInfo"], indent=3))
-            legacy_json = AuthHelperAuthenticator._convert_to_executor_format(auth_helper_response)
+            legacy_json = AuthHelperAuthenticator.convert_to_executor_format(auth_helper_response)
 
         return AuthenticationResult(
             status,
