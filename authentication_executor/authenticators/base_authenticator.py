@@ -1,9 +1,8 @@
 from abc import ABC, abstractmethod
-from collections import namedtuple
 from enum import Enum
 
 # TODO class
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 
 class AuthenticationStatus(Enum):
@@ -12,17 +11,46 @@ class AuthenticationStatus(Enum):
 
 
 class AuthenticationPayload:
-    def __init__(self, headers: Dict[str, str]):
+    def __init__(self, headers: Optional[Dict[str, str]], legacy_json=None):
         self.headers = headers
+        self.legacy_json = legacy_json
+
+    def to_dict(self):
+        if self.legacy_json:
+            return self.legacy_json
+        else:
+            return {
+                "headers": self.headers
+            }
 
 
 class AuthenticationResult:
-    def __init__(self, status: AuthenticationStatus, payload: AuthenticationPayload, har_data: dict,
+    def __init__(self, status: AuthenticationStatus, payload: AuthenticationPayload, har_data: Optional[dict],
                  debug_data: List[str]):
         self.status = status
         self.payload = payload
         self.har_data = har_data
         self.debug_data = debug_data
+
+
+class AuthenticationResultPostProcess:
+    def __init__(self, result: AuthenticationResult, har_filename, config):
+        self.result = result
+        self.config = config
+        self.har_filename = har_filename
+
+    def to_dict(self):
+        result_dict = {
+            "payload": self.result.payload.to_dict() if self.result.payload else None,
+            "debugData": self.result.debug_data,
+            "config": self.config,  # TODO serialize
+            "status": self.result.status.value
+        }
+
+        if self.har_filename:
+            result_dict["harFilename"] = self.har_filename
+
+        return result_dict
 
 
 class AuthSpecABC(ABC):

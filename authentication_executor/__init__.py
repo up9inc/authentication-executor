@@ -1,1 +1,2 @@
 from authentication_executor.authenticator import Authenticator, URLSignerABC, ApiClientABC, BucketUploaderABC
+from authentication_executor.authenticators.auth_helper_authenticator import AuthHelperAuthenticator
