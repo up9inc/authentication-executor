@@ -3,6 +3,8 @@ import logging
 import os
 import unittest
 
+import requests
+
 from authentication_executor import BucketUploaderABC
 from authentication_executor.authenticator import ApiClientABC, Authenticator, URLSignerABC
 from authentication_executor.test.data import configs
@@ -41,6 +43,41 @@ class AuthenticatorTests(unittest.TestCase):
         configs.pop('AUTH_HELPER')
         execute = authenticator.execute(configs, {"payloadId": "XXX_ZZZ"})
         self.assertEqual(execute.json['entityPayloads']['XXX_ZZZ']['headers']['Auth'], '2')
+
+    def test_basic_auth(self):
+        execute = authenticator.execute({
+            "basicAuth1": {
+                "type": "basicAuth",
+                "spec": {
+                    "username": "postman",
+                    "password": "password"
+                }
+            }
+        }, {"payloadId": "basicAuth1"})
+
+        headers = execute.json['entityPayloads']['basicAuth1']['headers']
+        self.assertEqual(headers['Authorization'], 'Basic cG9zdG1hbjpwYXNzd29yZA==')
+        resp = requests.get('https://postman-echo.com/basic-auth', headers=headers)
+        self.assertEqual(resp.status_code, 200)
+
+    def test_headers_dict(self):
+        execute = authenticator.execute({
+            "headers1": {
+                "type": "headers",
+                "spec": {
+                    "headers": [
+                        {"key": "Authorization", "value": "Basic cG9zdG1hbjpwYXNzd29yZA=="},
+                        {"key": "Dummy", "value": "Dummy1"}
+                    ]
+                }
+            }
+        }, {"payloadId": "headers1"})
+
+        headers = execute.json['entityPayloads']['headers1']['headers']
+        self.assertEqual(headers['Authorization'], 'Basic cG9zdG1hbjpwYXNzd29yZA==')
+        self.assertEqual(headers['Dummy'], 'Dummy1')
+        resp = requests.get('https://postman-echo.com/basic-auth', headers=headers)
+        self.assertEqual(resp.status_code, 200)
 
     def test_should_execute(self):
         assignments = {
