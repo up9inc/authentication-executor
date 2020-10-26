@@ -29,13 +29,15 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
         status = AuthenticationStatus.SUCCESS
         auth_helper_response = None
         legacy_json = None
-        debug_data = None
+        debug_data = []
+        har_data = None
 
         try:
             resp = requests_session.post(f'http://{auth_helper_server}:3000', json=self.execution_spec.spec)
             auth_helper_response = resp.json()
             resp.raise_for_status()
         except BaseException as e:
+            debug_data.append(str(e))
             status = AuthenticationStatus.FAIL
         finally:
             requests_session.close()
@@ -44,11 +46,12 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
             debug_data = auth_helper_response["debugData"]
             debug_data.append(json.dumps(auth_helper_response["resultInfo"], indent=3))
             legacy_json = AuthHelperAuthenticator.convert_to_executor_format(auth_helper_response)
+            har_data = auth_helper_response.get("har")
 
         return AuthenticationResult(
             status,
             AuthenticationPayload(headers=None, legacy_json=legacy_json),
-            wrapper.to_har(),
+            har_data or wrapper.to_har(),
             debug_data
         )
 
