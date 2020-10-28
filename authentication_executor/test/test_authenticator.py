@@ -73,8 +73,8 @@ class AuthenticatorTests(unittest.TestCase):
                         ],
                         "type": "json",
                         "body": {
-                            "client_id": "yAaEuTi0xoILJ6awWf6nXTbgw6GZe8Nb",
-                            "client_secret": "46u0ttx-8SgfOQ6O-KXG__gKE0Wi3MQVFd1oaJw4Sl22pOmReiXIWq192Al8RAL3",
+                            "client_id": "YYY",
+                            "client_secret": "XXX",
                             "audience": "myTest",
                             "grant_type": "client_credentials"
                         }
