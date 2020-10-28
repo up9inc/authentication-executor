@@ -60,6 +60,36 @@ class AuthenticatorTests(unittest.TestCase):
         resp = requests.get('https://postman-echo.com/basic-auth', headers=headers)
         self.assertEqual(resp.status_code, 200)
 
+    def test_token_request(self):
+        execute = authenticator.execute({
+            "req1": {
+                "type": "tokenRequest",
+                "spec": {
+                    "request": {
+                        "url": "https://dev-bq0g-83u.us.auth0.com/oauth/token",
+                        "method": "post",
+                        "headers": [
+                            {"key": "XXX", "value": "ZZZ"}
+                        ],
+                        "type": "json",
+                        "body": {
+                            "client_id": "yAaEuTi0xoILJ6awWf6nXTbgw6GZe8Nb",
+                            "client_secret": "46u0ttx-8SgfOQ6O-KXG__gKE0Wi3MQVFd1oaJw4Sl22pOmReiXIWq192Al8RAL3",
+                            "audience": "myTest",
+                            "grant_type": "client_credentials"
+                        }
+                    },
+                    "payload": {
+                        "header": "Authorization",
+                        "valueJsonPath": "Bearer $.access_token"
+                    }
+                }
+            }
+        }, {"payloadId": "req1"})
+
+        headers = execute.json['entityPayloads']['req1']['headers']
+        self.assertRegex(headers['Authorization'], 'Bearer eyJ')
+
     def test_headers_dict(self):
         execute = authenticator.execute({
             "headers1": {
