@@ -17,7 +17,7 @@ class AuthenticatorFactory:
         spec = config["spec"]
         if authenticator_type == 'customCode':
             return CustomCodeAuthenticator(spec)
-        elif authenticator_type == 'request':
+        elif authenticator_type == 'tokenRequest':
             return RequestAuthenticator(spec)
         elif authenticator_type == 'authHelper':
             return AuthHelperAuthenticator(spec)
