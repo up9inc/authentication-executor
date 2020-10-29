@@ -72,7 +72,7 @@ class RequestAuthenticator(BaseAuthenticatorABC):
                 status = AuthenticationStatus.FAIL
 
         requests_session.close()
-        print(debug_data)
+
         return AuthenticationResult(
             status,
             AuthenticationPayload(
