@@ -12,6 +12,7 @@ from authentication_executor.test.data import configs
 
 class BucketUploaderMock(BucketUploaderABC):
     def upload(self, data, filename, signed_url) -> str:
+        print(data)
         return '/stub/file.har'
 
 
@@ -39,8 +40,7 @@ authenticator = Authenticator(
 
 class AuthenticatorTests(unittest.TestCase):
     def test_aggregate_results(self):
-        os.environ['AUTH_HELPER_SERVER'] = "localhost:3001"
-        configs.pop('AUTH_HELPER')
+        os.environ['AUTH_HELPER_SERVER'] = "localhost"
         execute = authenticator.execute(configs, {"payloadId": "XXX_ZZZ"})
         self.assertEqual(execute.json['entityPayloads']['XXX_ZZZ']['headers']['Auth'], '2')
 
