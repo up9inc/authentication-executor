@@ -8,7 +8,7 @@ git:
 services:
 - docker
 before_script:
-- echo ${GITHUB_SSH_KEY} > ~/.ssh/id_rsa
+- echo ${GITHUB_SSH_KEY_BASE64} | base64 -d  > ~/.ssh/id_rsa
 script:
 - echo "nothing to do, we just want to cause calibrator runner to build"
 install:
