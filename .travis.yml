@@ -8,6 +8,7 @@ git:
 services:
 - docker
 install:
+- ssh-agent -s
 - ssh-add - <<< $(${GITHUB_SSH_KEY_BASE64} | base64 -d)
 # - echo "${GITHUB_SSH_KEY_BASE64}" | base64 -d > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
 - echo "Extracting scripts from git..." && CURRENT_DIR=$(pwd) && cd .. && git clone -q git@github.com:up9inc/env-config.git && cd env-config && cd $CURRENT_DIR
