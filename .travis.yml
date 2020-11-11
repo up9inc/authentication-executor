@@ -8,6 +8,6 @@ git:
 services:
 - docker
 script:
-- "../env-config/devops/ci/authenticate_gcr.sh"
+- echo "nothing to do, we just want to cause calibrator runner to build""
 install:
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then travis_fold start "calibrator_runner_build_request" && ../env-config/devops/ci/start_dependent_project_travis.sh calibrator-runner && travis_fold end "calibrator_runner_build_request"; fi
