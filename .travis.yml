@@ -9,7 +9,8 @@ services:
 - docker
 install:
 - eval `ssh-agent`
-- ssh-add - <<< $(${GITHUB_SSH_KEY_BASE64} | base64 -d)
+# - ssh-add - <<< $(${GITHUB_SSH_KEY_BASE64} | base64 -d)
+- echo $("GITHUB_SSH_KEY_BASE64" | base64 -d) | tr -d '\r' | ssh-add - > /dev/null
 # - echo "${GITHUB_SSH_KEY_BASE64}" | base64 -d > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
 - echo "Extracting scripts from git..." && CURRENT_DIR=$(pwd) && cd .. && git clone -q git@github.com:up9inc/env-config.git && cd env-config && cd $CURRENT_DIR
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then travis_fold start "calibrator_runner_build_request" && ../env-config/devops/ci/start_dependent_project_travis.sh calibrator-runner && travis_fold end "calibrator_runner_build_request"; fi
