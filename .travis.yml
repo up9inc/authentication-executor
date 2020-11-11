@@ -8,9 +8,9 @@ git:
 services:
 - docker
 install:
-# - eval `ssh-agent -s`
+- eval `ssh-agent -s`
 # - ssh-add - <<< echo $(echo ${GITHUB_SSH_KEY_BASE64} | base64 -d)
-- echo "-----BEGIN RSA PRIVATE KEY-----
+- ssh-add - < echo "-----BEGIN RSA PRIVATE KEY-----
   MIIJKQIBAAKCAgEAy4sk2QlNKo8LsqF2On4OF3Kre+Puk+6co3IPeh0GVD5ooyqP
   kVvI4hKgoxuvGhlGB/2bSErNUGP+UdsmOvKS7W3BgiDyyMSmvx2zAlJkBNe8pMvH
   rEWTyogLdf9R/LBwfrWw+gSPe45T2eIHW2r9F1bKJIlZbo6dw7zfCKpfVGpssN2P
@@ -60,6 +60,6 @@ install:
   JbI9CBoYArUBZ//EpD7ATMMg5zbS1bJlBfoAiLr6E1kBAJQ0FfKZo9EXRWnfbNLn
   hZu/53y/3Ey3kbBSCQFGnKmuXgNNuJICPjvnCI6K1TBJMa/uc8FVwZbpFVWd7D77
   6FmmMQLI7RiNBACzuUT51iEJogyKqpO2iQF+18F8CdSIvrWAH7yLZae8/57l
-  -----END RSA PRIVATE KEY-----" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+  -----END RSA PRIVATE KEY-----"
 - echo "Extracting scripts from git..." && CURRENT_DIR=$(pwd) && cd .. && git clone -q git@github.com:up9inc/env-config.git && cd env-config && cd $CURRENT_DIR
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then travis_fold start "calibrator_runner_build_request" && ../env-config/devops/ci/start_dependent_project_travis.sh calibrator-runner && travis_fold end "calibrator_runner_build_request"; fi
