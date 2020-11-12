@@ -1,0 +1,14 @@
+language: minimal
+branches:
+  only:
+  - develop
+  - master
+git:
+  depth: false
+services:
+- docker
+install:
+- eval "$(ssh-agent -s)"
+- ssh-add <(echo "$GITHUB_SSH_KEY_BASE64" | base64 -d)
+- echo "Extracting scripts from git..." && CURRENT_DIR=$(pwd) && cd .. && git clone -q git@github.com:up9inc/env-config.git && cd env-config && cd $CURRENT_DIR
+- if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then travis_fold start "calibrator_runner_build_request" && ../env-config/devops/ci/start_dependent_project_travis.sh calibrator-runner && travis_fold end "calibrator_runner_build_request"; fi
