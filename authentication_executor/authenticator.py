@@ -105,7 +105,9 @@ class Authenticator:
         :return: Aggregated result for env var
         """
         self.logger.info("Starting authentication execution", extra={
-            "executionId": self.execution_id
+            "executionId": self.execution_id,
+            "authConfigs": auth_configs,
+            "assignments": assignments
         })
 
         results = {config_id: self._process_config(config_id, config) for config_id, config in auth_configs.items() if self._should_execute(config_id, assignments)}
@@ -119,6 +121,9 @@ class Authenticator:
 
         if did_any_fail:
             raise Exception("Authentication Execution Failed!")
+
+        results = Authenticator._to_result_dict(assignments, results)
+        self.logger.info("Finished execution", extra={"results": results})
 
         return AuthExecutionResult(
             self.execution_id,
