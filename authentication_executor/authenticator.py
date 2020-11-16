@@ -122,12 +122,12 @@ class Authenticator:
         if did_any_fail:
             raise Exception("Authentication Execution Failed!")
 
-        results = Authenticator._to_result_dict(assignments, results)
-        self.logger.info("Finished execution", extra={"results": results})
+        result_dict = Authenticator._to_result_dict(assignments, results)
+        self.logger.info("Finished execution", extra={"results": result_dict})
 
         return AuthExecutionResult(
             self.execution_id,
-            Authenticator._to_result_dict(assignments, results)
+            result_dict
         )
 
     @staticmethod
