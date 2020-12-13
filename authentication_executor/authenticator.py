@@ -65,7 +65,7 @@ class Authenticator:
         })
 
         har_filename = None
-        if result.har_data:
+        if result.har_data and self.bucket_uploader:
             har_filename = f"{config_id}_{str(uuid4())[:6]}.har"
             signed_url = self.url_signer.get_signed_url(self.execution_id, har_filename)
             self.logger.info("Uploading HAR")
@@ -111,11 +111,11 @@ class Authenticator:
         results = {config_id: self._process_config(config_id, config) for config_id, config in auth_configs.items() if self._should_execute(config_id, assignments)}
 
         did_any_fail = any(post_process_result.result.status != AuthenticationStatus.SUCCESS for post_process_result in results.values())
-
-        self.api_client.persist_results(self.execution_id, {
-            "executions": {k: v.to_dict() for k, v in results.items()},
-            "status": AuthExecutionStatus.FAIL.value if did_any_fail else AuthExecutionStatus.SUCCESS.value
-        })
+        if self.api_client:
+            self.api_client.persist_results(self.execution_id, {
+                "executions": {k: v.to_dict() for k, v in results.items()},
+                "status": AuthExecutionStatus.FAIL.value if did_any_fail else AuthExecutionStatus.SUCCESS.value
+            })
 
         if did_any_fail:
             raise Exception("Authentication Execution Failed!")
