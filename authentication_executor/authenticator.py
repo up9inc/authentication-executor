@@ -46,7 +46,7 @@ class Authenticator:
         self.api_client = api_client
         self.url_signer = url_signer
         self.bucket_uploader = bucket_uploader
-        self.execution_id = self.api_client.create_execution_id()
+        self.execution_id = self.api_client.create_execution_id() if self.api_client else "offline"
         self.logger = logger
 
     # TODO perhaps this should return a class with JSON serialization
