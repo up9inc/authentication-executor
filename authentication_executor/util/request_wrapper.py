@@ -32,7 +32,7 @@ class RequestWrapper:
             return None
 
         return {
-            "mimeType": request.headers.get('content-type'),
+            "mimeType": request.headers.get('content-type', '?'),
             "text": str(request.body)
             # TODO missing params, body is interepreted as bytes
         }
