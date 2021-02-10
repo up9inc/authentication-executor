@@ -42,6 +42,8 @@ class RequestWrapper:
         query = urlparse(request.url).query
         self._entries.append({
             "startedDateTime": (datetime.datetime.now() - resp.elapsed).astimezone().isoformat(),
+            # TODO datetime.datetime.now() - resp.elapsed,	
+            "time": 0,
             "request": {
                 "method": request.method,
                 "httpVersion": '',
