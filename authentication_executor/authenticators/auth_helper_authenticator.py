@@ -24,7 +24,12 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
         auth_helper_server = os.environ.get('AUTH_HELPER_SERVER')
 
         if auth_helper_server is None:
-            raise Exception("NO AUTH HELPER SERVER")
+            return AuthenticationResult(
+                AuthenticationStatus.FAIL,
+                AuthenticationPayload(headers=None, legacy_json={}),
+                {},
+                ['Auth helper not available']
+            )
 
         status = AuthenticationStatus.SUCCESS
         auth_helper_response = None
