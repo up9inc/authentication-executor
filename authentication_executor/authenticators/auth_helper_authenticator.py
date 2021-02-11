@@ -24,7 +24,12 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
         auth_helper_server = os.environ.get('AUTH_HELPER_SERVER')
 
         if auth_helper_server is None:
-            raise Exception("NO AUTH HELPER SERVER")
+            return AuthenticationResult(
+                AuthenticationStatus.FAIL,
+                AuthenticationPayload(headers=None, legacy_json={}),
+                {},
+                ['Auth helper not available']
+            )
 
         status = AuthenticationStatus.SUCCESS
         auth_helper_response = None
@@ -42,10 +47,14 @@ class AuthHelperAuthenticator(BaseAuthenticatorABC):
         finally:
             requests_session.close()
 
-        if auth_helper_response:
-            debug_data = auth_helper_response["debugData"]
-            debug_data.append(json.dumps(auth_helper_response["resultInfo"], indent=3))
-            legacy_json = AuthHelperAuthenticator.convert_to_executor_format(auth_helper_response)
+        if auth_helper_response is not None:
+            debug_data = auth_helper_response.get("debugData", "")
+            debug_data.append(json.dumps(auth_helper_response.get("resultInfo", {}), indent=3))
+            try:
+                legacy_json = AuthHelperAuthenticator.convert_to_executor_format(auth_helper_response)
+            except Exception:
+                debug_data.append("Error while getting legacy json")
+                legacy_json = {}
             har_data = auth_helper_response.get("har")
 
         return AuthenticationResult(
