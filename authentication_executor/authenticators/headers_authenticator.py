@@ -1,7 +1,6 @@
 from authentication_executor.authenticators.base_authenticator import AuthenticationPayload, AuthenticationResult, \
     AuthenticationStatus, AuthSpecABC, \
     BaseAuthenticatorABC
-import base64
 
 
 class HeadersAuthenticatorSpec(AuthSpecABC):
