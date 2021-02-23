@@ -46,7 +46,7 @@ class Authenticator:
         self.api_client = api_client
         self.url_signer = url_signer
         self.bucket_uploader = bucket_uploader
-        self.execution_id = self.api_client.create_execution_id() if self.api_client else "offline"
+        self.execution_id = self.api_client.create_execution_id()
         self.logger = logger
 
     # TODO perhaps this should return a class with JSON serialization
@@ -64,7 +64,7 @@ class Authenticator:
             "status": result.status.value
         })
         har_filename = None
-        if result.har_data and self.bucket_uploader:
+        if result.har_data:
             har_filename = f"{config_id}_{str(uuid4())[:6]}.har"
             signed_url = self.url_signer.get_signed_url(self.execution_id, har_filename)
             self.logger.info("Uploading HAR")
@@ -111,11 +111,10 @@ class Authenticator:
 
         did_any_fail = any(post_process_result.result.status != AuthenticationStatus.SUCCESS for post_process_result in results.values())
 
-        if self.api_client:
-            self.api_client.persist_results(self.execution_id, {
-                "executions": {k: v.to_dict() for k, v in results.items()},
-                "status": AuthExecutionStatus.FAIL.value if did_any_fail else AuthExecutionStatus.SUCCESS.value
-            })
+        self.api_client.persist_results(self.execution_id, {
+            "executions": {k: v.to_dict() for k, v in results.items()},
+            "status": AuthExecutionStatus.FAIL.value if did_any_fail else AuthExecutionStatus.SUCCESS.value
+        })
 
         if did_any_fail:
             raise Exception("Authentication Execution Failed!")
