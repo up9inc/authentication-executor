@@ -63,6 +63,7 @@ class Authenticator:
             **extra,
             "status": result.status.value
         })
+
         har_filename = None
         if result.har_data:
             har_filename = f"{config_id}_{str(uuid4())[:6]}.har"
