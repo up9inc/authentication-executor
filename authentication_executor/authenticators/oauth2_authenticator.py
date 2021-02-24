@@ -147,6 +147,7 @@ class OAuth2Authenticator(BaseAuthenticatorABC):
         token = response_json.get('access_token', response_json.get('accessToken', response_json.get('token')))  # not everyone follows spec perfectly sadly
         if token is None:
             raise ValueError('token not found')
+        return token
 
 
 class UnsupportedTokenTypeException(Exception):
