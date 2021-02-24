@@ -3,6 +3,7 @@ from .auth_helper_authenticator import AuthHelperAuthenticator
 from .basic_auth_authenticator import BasicAuthAuthenticator
 from .custom_code_authenticator import CustomCodeAuthenticator
 from .headers_authenticator import HeadersAuthenticator
+from .oauth2_authenticator import OAuth2Authenticator
 from .request_authenticator import RequestAuthenticator
 
 
@@ -25,6 +26,8 @@ class AuthenticatorFactory:
             return BasicAuthAuthenticator(spec)
         elif authenticator_type == 'headers':
             return HeadersAuthenticator(spec)
+        elif authenticator_type == 'oauth2':
+            return OAuth2Authenticator(spec)
         else:
             raise InvalidAuthenticator()
 
