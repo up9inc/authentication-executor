@@ -11,7 +11,7 @@ from authentication_executor.test.data import configs
 
 
 class BucketUploaderMock(BucketUploaderABC):
-    def upload(self, data, filename, signed_url) -> str:
+    def upload(self, data, content_type, signed_url) -> str:
         print(data)
         return '/stub/file.har'
 
